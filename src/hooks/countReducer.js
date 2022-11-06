@@ -6,8 +6,8 @@ function countReducer(initialState = 0, action) {
   } else if (action === 'increament') {
     return initialState + 1;
   } else if (action === 'reset') {
-    return initialState;
-  } 
+    return (initialState = 0);
+  }
 }
 
 export default countReducer;
