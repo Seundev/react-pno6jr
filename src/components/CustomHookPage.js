@@ -1,5 +1,7 @@
 import React from 'react';
 import useCounter from '../hooks/useCounter';
+import { Link } from 'react-router-dom';
+
 
 const CustomHookPage = () => {
   const counter = useCounter(0);
@@ -7,7 +9,10 @@ const CustomHookPage = () => {
 
   return (
     <>
+      <Link to="/UseReducerPage">UseReducerPage</Link>
+
       <div className="counter-container">
+
         <div>
         <button className="button" onClick={decreament}>
           Decreament
