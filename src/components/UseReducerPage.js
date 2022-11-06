@@ -7,7 +7,7 @@ const UseReducerPage = () => {
   const [count, dispatch] = useReducer(countReducer, 0);
   return (
     <div>
-      <Link to="/">CustomHookPage</Link>
+      <Link className="link-color" to="/">CustomHookPage</Link>
 
       <div className="counter-container">
         <button className="button" onClick={() => dispatch('decreament')}>
