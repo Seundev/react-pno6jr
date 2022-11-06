@@ -2,6 +2,7 @@ import React from 'react';
 import countReducer from '../hooks/countReducer';
 import { useReducer } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const UseReducerPage = () => {
   const [count, dispatch] = useReducer(countReducer, 0);
@@ -9,7 +10,7 @@ const UseReducerPage = () => {
     <div>
       <Helmet>
         <title>React counter project</title>
-        <mata name="description" content="Seun's useReducerPage App" />
+        <meta name="description" content="Seun's useReducerPage App" />
         <meta
           name="Keywords"
           content="Customhooks,React, Seun's project, Developer, Github "

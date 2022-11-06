@@ -29,7 +29,7 @@ function ErrorBoundary() {
     <div>
       <Helmet>
         <title>ErrorBoundary</title>
-        <mata name="description" content="Seun's counter App" />
+        <meta name="description" content="Seun's counter App" />
         <meta
           name="Keywords"
           content="Customhooks,React, Seun's project, Developer, ErorBoundary "
