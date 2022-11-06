@@ -36,3 +36,14 @@
   background-color: white;
   border-radius: 30%;
 }
+
+.link-color {
+  color: #252640;
+  font-size: 25px;
+}
+
+.home-page {
+  color: #8e95bf;
+  text-align: center;
+  margin-top: 50px;
+}

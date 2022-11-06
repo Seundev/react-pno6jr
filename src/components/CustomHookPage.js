@@ -1,6 +1,7 @@
 import React from 'react';
 import useCounter from '../hooks/useCounter';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const CustomHookPage = () => {
   const counter = useCounter(0);
@@ -8,8 +9,22 @@ const CustomHookPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>React counter project</title>
+        <mata name="description" content="Seun's counter App" />
+        <meta
+          name="Keywords"
+          content="Customhooks,React, Seun's project, Developer, Github "
+        />
+      </Helmet>
+
       <Link className="link-color" to="/UseReducerPage">
         UseReducerPage
+      </Link>
+      <br />
+      <br />
+      <Link className="link-color" to="/">
+        Home
       </Link>
 
       <div className="counter-container">
