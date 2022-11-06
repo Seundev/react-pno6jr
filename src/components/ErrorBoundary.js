@@ -1,11 +1,12 @@
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
+import { useState } from 'react';
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
-    <div role="alert">
+    <div className="error-boundary-countainer,">
       <p>Something went wrong:</p>
-      <pre style={{ color: 'red' }}>{error.message}</pre>
+      <p style={{ color: 'red' }}>{error.message}</p>
       <button onClick={resetErrorBoundary}>Try again</button>
     </div>
   );
@@ -18,8 +19,8 @@ function Bomb({ username }) {
   return `Hi ${username}`;
 }
 
-function App() {
-  const [username, setUsername] = React.useState('');
+function ErrorBoundary() {
+  const [username, setUsername] = useState('');
   const usernameRef = React.useRef(null);
 
   return (
