@@ -1,6 +1,8 @@
 import React from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { useState } from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 function ErrorFallback({ error, resetErrorBoundary }) {
   return (
@@ -25,6 +27,19 @@ function ErrorBoundary() {
 
   return (
     <div>
+      <Helmet>
+        <title>ErrorBoundary</title>
+        <mata name="description" content="Seun's counter App" />
+        <meta
+          name="Keywords"
+          content="Customhooks,React, Seun's project, Developer, ErorBoundary "
+        />
+      </Helmet>
+
+      <Link className="link-color" to="/">
+        Home
+      </Link>
+
       <label>
         {`Username (don't type "bomb"): `}
         <input
