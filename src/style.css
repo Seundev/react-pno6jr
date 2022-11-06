@@ -1,0 +1,38 @@
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  height: 300pxpx;
+  width: 500px;
+  background-color: #252640;
+  border-radius: 15%;
+}
+.button {
+  margin: 15px 20px;
+  color: white;
+  padding: 10px 10px;
+  background-color: #8e95bf;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: #d5d962;
+  font-size: larger;
+}
+
+.result {
+  font-size: 80px;
+  font-weight: 600;
+  text-align: center;
+  color: #252640;
+  width: 350px;
+  height: 5\70px;
+  background-color: white;
+  border-radius: 30%;
+}
