@@ -11,7 +11,7 @@ const CustomHookPage = () => {
     <>
       <Helmet>
         <title>React counter project</title>
-        <mata name="description" content="Seun's counter App" />
+        <meta name="description" content="Seun's counter App" />
         <meta
           name="Keywords"
           content="Customhooks,React, Seun's project, Developer, Github "
