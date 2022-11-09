@@ -14,16 +14,16 @@ function ErrorFallback({ error, resetErrorBoundary }) {
   );
 }
 
-function Bomb({ username }) {
-  if (username === 'bomb') {
+function ErrorBoundary() {
+  const [username, setUsername] = useState(false);
+
+  const test = {
+    description: `ErrorBoundary section`,
+  };
+
+  function Bomb() {
     throw new Error('💥 CABOOM 💥');
   }
-  return `Hi ${username}`;
-}
-
-function ErrorBoundary() {
-  const [username, setUsername] = useState('');
-  const usernameRef = React.useRef(null);
 
   return (
     <div>
@@ -40,25 +40,20 @@ function ErrorBoundary() {
         Home
       </Link>
 
-      <label>
-        {`Username (don't type "bomb"): `}
-        <input
-          placeholder={`type "bomb"`}
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          ref={usernameRef}
-        />
-      </label>
-      <div>
+      <div className="errorboundary-container">
         <ErrorBoundary
           FallbackComponent={ErrorFallback}
-          onReset={() => {
-            setUsername('');
-            usernameRef.current.focus();
-          }}
+          onReset={() => setUsername(false)}
           resetKeys={[username]}
         >
-          <Bomb username={username} />
+          <h5>{test.description.toUpperCase()}</h5>
+          <h4>Error will be thrown once you click the button</h4>
+          <div>
+            {username ? <Bomb /> : null}
+            <button onClick={() => setUsername((state) => !state)}>
+              Click Explode
+            </button>
+          </div>
         </ErrorBoundary>
       </div>
     </div>
