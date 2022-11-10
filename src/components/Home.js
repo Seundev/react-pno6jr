@@ -17,6 +17,11 @@ const Home = () => {
         </Link>
         <br />
         <br />
+        <Link className="link-color" to="/errorpage">
+          ErrorPage
+        </Link>
+        <br />
+        <br />
         <Link className="link-color" to="/ErrorBoundary">
           ErrorBoundary
         </Link>
