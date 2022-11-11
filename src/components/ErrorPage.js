@@ -7,7 +7,9 @@ const ErrorPage = () => {
       <Link className="link-color" to="/">
         Home
       </Link>
-      <h1>404 Page</h1>
+      <div>
+        <h1>404 Page</h1>
+      </div>
     </>
   );
 };
