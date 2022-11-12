@@ -16,27 +16,38 @@ const UseReducerPage = () => {
           content="Customhooks,React, Seun's project, Developer, Github "
         />
       </Helmet>
-      <Link className="link-color" to="/customhookpage">
-        CustomHookPage
-      </Link>
-      <br />
-      <br />
-      <Link className="link-color" to="/">
-        Home
-      </Link>
+      <div className="link">
+        <Link className="link-color" to="/customhookpage">
+          CustomHookPage
+        </Link>
+        <br />
+        <br />
+        <Link className="link-color" to="/">
+          Home
+        </Link>
+      </div>
 
-      <div className="counter-container">
-        <button className="button" onClick={() => dispatch('decreament')}>
+      <div className="counter-container-2">
+        <button
+          className="usereducer-button"
+          onClick={() => dispatch('decreament')}
+        >
           Decreament
         </button>
-        <button className="button" onClick={() => dispatch('setValue')}>
+        <button
+          className="usereducer-button"
+          onClick={() => dispatch('setValue')}
+        >
           multiply by 9
         </button>
         <div className="result">{count}</div>
-        <button className="button" onClick={() => dispatch('increament')}>
+        <button
+          className="usereducer-button"
+          onClick={() => dispatch('increament')}
+        >
           Increament
         </button>
-        <button className="button" onClick={() => dispatch('reset')}>
+        <button className="usereducer-button" onClick={() => dispatch('reset')}>
           Reset
         </button>
       </div>
