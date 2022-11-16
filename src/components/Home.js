@@ -5,25 +5,20 @@ const Home = () => {
   return (
     <div className="home-page">
       <div className="home-link">
-        <h1>Hi, Welcome to my counter Project.</h1>
+        <h1 className="home-heading">Hi, Welcome to my counter Project.</h1>
 
-        <Link className="link-color" to="/customhookpage">
-          CustomHookPage
+        <Link to="/customhookpage">
+          <button className="link-button">custom hook page</button>
         </Link>
         <br />
         <br />
-        <Link className="link-color" to="/UseReducerPage">
-          UseReducerPage
+        <Link to="/UseReducerPage">
+          <button className="link-button">usereducer page</button>
         </Link>
         <br />
         <br />
-        <Link className="link-color" to="/errorpage">
-          ErrorPage
-        </Link>
-        <br />
-        <br />
-        <Link className="link-color" to="/ErrorBoundary">
-          ErrorBoundary
+        <Link to="/errorpage">
+          <button className="link-button">error page</button>
         </Link>
       </div>
     </div>

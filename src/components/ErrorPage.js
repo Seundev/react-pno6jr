@@ -3,14 +3,15 @@ import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
   return (
-    <>
+    <div className="error-container">
       <Link className="link-color" to="/">
-        Home
+        <button className="link-button">home</button>
       </Link>
-      <div>
+      <div className="error">
         <h1>404 Page</h1>
+        <p>This is an Error page.</p>
       </div>
-    </>
+    </div>
   );
 };
 export default ErrorPage;

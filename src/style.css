@@ -1,15 +1,19 @@
+.main-counter-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .counter-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300pxpx;
-  width: 700px;
+  height: 300px;
+  width: 650px;
   background-color: #252640;
   border-radius: 15%;
-  text-align: center;
-  margin-top: 100px;
-  margin-left: 300px;
   max-width: 100%;
 }
 
@@ -19,12 +23,22 @@
   align-items: center;
   justify-content: center;
   height: 300pxpx;
-  width: 700px;
+  width: 650px;
   background-color: #8e95bf;
   border-radius: 15%;
+  max-width: 100%;
+}
+
+.result {
+  font-size: 35px;
+  font-weight: 600;
+  padding-top: 30px;
   text-align: center;
-  margin-top: 100px;
-  margin-left: 300px;
+  color: #352540;
+  width: 600px;
+  height: 100px;
+  background-color: white;
+  border-radius: 30%;
   max-width: 100%;
 }
 .usereducer-button {
@@ -36,7 +50,6 @@
   text-align: center;
   cursor: pointer;
   font-size: 1.25rem;
-  text-decoration: none;
 }
 
 .customhook-button {
@@ -48,12 +61,10 @@
   text-align: center;
   cursor: pointer;
   font-size: 1.25rem;
-  text-decoration: none;
 }
 
 .usereducer-button:hover {
   color: #d5d962;
-  font-size: larger;
 }
 
 .customhook-button:hover {
@@ -61,50 +72,42 @@
   font-size: 25px;
 }
 
-.result {
-  font-size: 80px;
-  font-weight: 600;
-  text-align: center;
-  color: #252640;
-  width: 600px;
-  height: 100px;
-  background-color: white;
-  border-radius: 30%;
-}
-
-.link-color {
-  color: #252640;
-  font-size: 25px;
-  text-decoration: none;
+body {
+  background-color: rgb(67, 49, 75);
 }
 
 .home-page {
-  color: #8e95bf;
-  text-align: center;
   margin-top: 200px;
+  text-align: center;
 }
 
-.home-page-container {
-  background-color: bisque;
+.home-heading {
+  color: #6175e6;
+  font-size: 45px;
 }
 
-.main-page {
-  color: #252640;
+.link-button {
+  margin: 15px 20px;
+  color: #edf1ea;
+  padding: 10px 10px;
+  background-color: #2fb2f3;
+  border-radius: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.25rem;
 }
 
-.link {
-  display: flex;
-  gap: 20px;
+.error {
+  text-align: center;
 }
 
-.error-page {
-  color: #8f290a;
-  /* background-color: #8e95bf; */
-  /* background-size: cover; */
+.error h1 {
+  color: aliceblue;
+  font-size: 45px;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.error-page-container {
-  color: #8e95bf;
-  /* background-color: #8e95bf; */
-  /* background-size: cover; */
+.error p {
+  color: aliceblue;
+  font-size: 45px;
 }

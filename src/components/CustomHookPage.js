@@ -8,7 +8,7 @@ const CustomHookPage = () => {
   const { value, decreament, setValue, increament, reset } = counter;
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>React counter project</title>
         <meta name="description" content="Seun's counter App" />
@@ -19,37 +19,42 @@ const CustomHookPage = () => {
       </Helmet>
 
       <div className="link">
-        <Link className="link-color" to="/UseReducerPage">
-          UseReducerPage
-        </Link>
-        <br />
-        <br />
         <Link className="link-color" to="/">
-          Home
+          <button className="link-button">home</button>
         </Link>
+        <Link className="link-color" to="/UseReducerPage">
+          <button className="link-button">usereducer page</button>
+        </Link>
+        <br />
+        <br />
       </div>
 
-      <div className="counter-container">
-        <div>
-          <button className="customhook-button" onClick={decreament}>
-            Decreament
-          </button>
-          <button
-            className="customhook-button"
-            onClick={() => setValue(value * 9)}
-          >
-            multiply value of 9
-          </button>
+      <div className="main-counter-container">
+        <div className="counter-container">
+          <div>
+            <button className="customhook-button" onClick={increament}>
+              Increament
+            </button>
+            <button className="customhook-button" onClick={decreament}>
+              Decreament
+            </button>
+          </div>
+          <div className="result">{value}</div>
+
+          <div>
+            <button
+              className="customhook-button"
+              onClick={() => setValue(value * 9)}
+            >
+              multiply value of 9
+            </button>
+            <button className="customhook-button" onClick={reset}>
+              Reset
+            </button>
+          </div>
         </div>
-        <div className="result">{value}</div>
-        <button className="customhook-button" onClick={increament}>
-          Increament
-        </button>
-        <button className="customhook-button" onClick={reset}>
-          Reset
-        </button>
       </div>
-    </>
+    </div>
   );
 };
 
