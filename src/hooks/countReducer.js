@@ -1,13 +1,18 @@
-function countReducer(initialState = 0, action) {
-  if (action === 'decreament') {
-    return initialState - 1;
-  } else if (action === 'setValue') {
-    return initialState * 9;
-  } else if (action === 'increament') {
-    return initialState + 1;
-  } else if (action === 'reset') {
-    return (initialState = 0);
+const countReducer = (state, action) => {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    case 'reset':
+      return { count: 0 };
+    case 'multiply':
+      return { count: state.count * 3 };
+    case 'setValue':
+      return { count: action.value };
+    default:
+      return state;
   }
-}
+};
 
 export default countReducer;

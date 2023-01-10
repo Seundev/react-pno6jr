@@ -4,19 +4,20 @@
   flex-direction: column;
   align-items: center;
 }
-
+/* custom hook counter  */
 .counter-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: 370px;
   width: 650px;
   background-color: #252640;
   border-radius: 15%;
   max-width: 100%;
 }
 
+/* useReducer hook counter */
 .counter-container-2 {
   display: flex;
   flex-direction: column;
@@ -53,14 +54,16 @@
 }
 
 .customhook-button {
-  margin: 15px 20px;
+  margin-bottom: 30px;
+  margin-right: 10px;
   color: white;
   padding: 10px 10px;
   background-color: #8e95bf;
-  border-radius: 15px;
+  border-radius: 20px;
   text-align: center;
   cursor: pointer;
   font-size: 1.25rem;
+  max-width: 100%;
 }
 
 .usereducer-button:hover {
@@ -69,11 +72,7 @@
 
 .customhook-button:hover {
   color: #92155a;
-  font-size: 25px;
-}
-
-body {
-  background-color: rgb(67, 49, 75);
+  font-size: 21px;
 }
 
 .home-page {

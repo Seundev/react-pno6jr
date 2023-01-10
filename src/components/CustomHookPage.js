@@ -5,7 +5,15 @@ import { Helmet } from 'react-helmet';
 
 const CustomHookPage = () => {
   const counter = useCounter(0);
-  const { value, decreament, setValue, increament, reset } = counter;
+  const {
+    inputRef,
+    count,
+    handleClick,
+    multiply,
+    decreament,
+    increament,
+    reset,
+  } = counter;
 
   return (
     <div>
@@ -38,20 +46,26 @@ const CustomHookPage = () => {
             <button className="customhook-button" onClick={decreament}>
               Decreament
             </button>
+            <button className="customhook-button" onClick={multiply}>
+              multiply by 9
+            </button>
           </div>
-          <div className="result">{value}</div>
+          <div className="result">{count}</div>
 
           <div>
-            <button
-              className="customhook-button"
-              onClick={() => setValue(value * 9)}
-            >
-              multiply value of 9
-            </button>
-            <button className="customhook-button" onClick={reset}>
-              Reset
-            </button>
+            <p>
+              <input ref={inputRef} type="number" />
+              <button onClick={handleClick}>set value</button>
+            </p>
           </div>
+
+          <button
+            className="customhook-reset-bttn"
+            className="customhook-button"
+            onClick={reset}
+          >
+            Reset
+          </button>
         </div>
       </div>
     </div>

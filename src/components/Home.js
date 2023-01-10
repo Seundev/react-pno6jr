@@ -17,6 +17,11 @@ const Home = () => {
         </Link>
         <br />
         <br />
+        <Link to="/error">
+          <button className="link-button">Error boundary</button>
+        </Link>
+        <br />
+        <br />
         <Link to="/errorpage">
           <button className="link-button">error page</button>
         </Link>

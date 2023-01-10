@@ -5,7 +5,10 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 const UseReducerPage = () => {
-  const [count, dispatch] = useReducer(countReducer, 0);
+  const [state, dispatch] = useReducer(countReducer, { count: 0 });
+
+  const setValue = (value) => dispatch({ type: 'setValue', value });
+
   return (
     <div>
       <Helmet>
@@ -27,30 +30,41 @@ const UseReducerPage = () => {
       </div>
       <div className="main-counter-container">
         <div className="counter-container-2">
-          <button
-            className="usereducer-button"
-            onClick={() => dispatch('increament')}
-          >
-            Increament
-          </button>
-          <button
-            className="usereducer-button"
-            onClick={() => dispatch('decreament')}
-          >
-            Decreament
-          </button>
+          <div>
+            <button
+              className="usereducer-button"
+              onClick={() => dispatch({ type: 'increment' })}
+            >
+              Increment
+            </button>
+            <button
+              className="usereducer-button"
+              onClick={() => dispatch({ type: 'decrement' })}
+            >
+              Decrement
+            </button>
+            <button
+              className="usereducer-button"
+              onClick={() => dispatch({ type: 'multiply' })}
+            >
+              mulitiply by 3
+            </button>
+          </div>
+          <div className="result">{state.count}</div>
 
-          <div className="result">{count}</div>
+          <p>
+            <input
+              type="number"
+              placeholder="input number"
+              value={state.count}
+              onChange={(e) => setValue(e.target.value)}
+              onMouseOut={(e) => (e.target.value = '')}
+            />
+          </p>
 
           <button
             className="usereducer-button"
-            onClick={() => dispatch('setValue')}
-          >
-            multiply by 9
-          </button>
-          <button
-            className="usereducer-button"
-            onClick={() => dispatch('reset')}
+            onClick={() => dispatch({ type: 'reset' })}
           >
             Reset
           </button>

@@ -1,17 +1,24 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
-function useCounter(intitialValue) {
-  const [value, setValue] = useState(intitialValue || 0);
+function useCounter() {
+  const [count, setCount] = useState(0);
 
-  const decreament = () => setValue((prevValue) => prevValue - 1);
-  const increament = () => setValue((prevValue) => prevValue + 1);
-  const reset = () => setValue(intitialValue || 0);
+  const inputRef = useRef();
+
+  const decreament = () => setCount((prevValue) => prevValue - 1);
+  const increament = () => setCount((prevValue) => prevValue + 1);
+  const multiply = () => setCount((prevValue) => prevValue * 9);
+  const reset = () => setCount(0);
+  const handleClick = () => setCount(inputRef.current.value);
 
   return {
-    value,
+    count,
     decreament,
-    setValue,
+    inputRef,
+    handleClick,
     increament,
+    multiply,
+    setCount,
     reset,
   };
 }
