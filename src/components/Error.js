@@ -69,7 +69,7 @@ export default function ErrorBoundary() {
         <button className="Action-btn" onClick={Reset}>
           reset
         </button>
-        <p>Your last count beofore you reset was: {history}</p>
+        <p>Your last count before you reset was: {history}</p>
       </div>
     </section>
   );
